@@ -1,0 +1,20 @@
+
+\usepackage{array}
+% we can use some options like:
+% m{width} is similar to \parbox{width}: the base line at the mmiddle
+% b{width} is similar to \parbox[b]{width}: the base line at the bottom
+% !{code} can be used like | but inserts code instead of a vertical line.
+% >{code} can be used before an l , c , r , p , m , or b option and inserts code right at the beginning of each entry of that column
+% <{code} can be used after an l , c , r , p , m , or b option and inserts code at the end of the entry of that column
+% @{code} insert code instead of empty space before or after column
+
+\setlength{\extrarowheight}{4pt}
+\begin{document}
+\begin{tabular}{@{}>{\itshape}ll!{:}l<{.}@{}}
+    \hline
+    List & Alpha & Beta\\
+    & One & Two\\
+    & First & Second\\
+    \hline
+\end{tabular}
+\end{document}

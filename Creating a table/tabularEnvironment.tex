@@ -1,0 +1,30 @@
+
+\begin{tabular}{ccc}
+% c stand for centered alignment, there are three c so we will have 3 column
+% t stand for top, b stand for bottom   
+    \hline
+    \bfseries Level 1 & Level 2 & Level 3\\
+    % column entries are separated by &
+    \hline
+    \bfseries Alpha & Beta & Gamma\\
+    \bfseries One & Two & Three\\
+    \bfseries First & Second & Third\\
+    \hline \\
+\end{tabular}
+% futher tabular has other args
+% \begin{tabular}[pos]{cols}
+%     code
+% \end{tabular}
+
+\begin{tabular}{|l|c|r|p{1.7cm}|}
+    \hline
+    left & centered & right & a fully justified a paragraph cell\\
+    \hline
+    l & c & r & p\\
+    \hline 
+\end{tabular}
+% l left alignment
+% c centered alignment
+% p{width} a paragraph cell of certain width
+% @{code} insert code instead of empty space before or after column
+% *{n}{options} is equivalent to n copy of "options"

@@ -1,0 +1,27 @@
+
+\usepackage{paralist}
+% there are the compactdesc, asparadesc, inparadesc working analogous to other lists
+\usepackage[shortlabels]{enumitem}
+\setdescription{font=\itshape\rmfamily}
+% the same is valid for enumitem:
+% \setdescription{format} working like \setitemize or \setenumerate
+\begin{document}
+\begin{description}
+    \item[level 1] first content
+    % in the description environment, \item is defined such that 
+    % the optional paramater will be typeset in the bold typeface
+    \item[level 1] second content 
+    \begin{asparadesc}
+        \item[level 2] first content
+        \item[level 2] second content
+    \end{asparadesc}
+    \begin{compactdesc}
+        \item[level 2] first content
+        \item[level 2] second content
+    \end{compactdesc} 
+    \begin{inparadesc}
+        \item[level 2] first content
+        \item[level 2] second content
+    \end{inparadesc}
+\end{description}
+\end{document}

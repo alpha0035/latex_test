@@ -1,0 +1,52 @@
+\usepackage[shortlabels, inline]{enumitem}
+% \setlist sets properties valid for all type of list.
+% nolistsep to achieve very compact list analogous to compact paralist environment
+\setlist{nolistsep}
+% setitemize modifies all types of bulleted lists
+\setitemize[1]{label=---}
+% \setenumerate sets properties valid for numbered lists.
+% We use it to specify label and font
+% \Alph* stand for enumeration in capital letters A, B, C, ...
+\setenumerate[1]{label=\textcircled{\scriptsize\Alph*}, font=\sffamily}
+\begin{document}
+\begin{enumerate}
+    \item level 1
+    \item level 1
+    \begin{enumerate}[label=\Roman*., start=3]
+        \item level 2
+        \item level 2
+    \end{enumerate}
+    \begin{enumerate}[nolistsep, label=\alph*)]
+        \item level 2
+        \item level 2
+    \end{enumerate}
+    \begin{enumerate}[label=\alph*)]
+        \item level 2
+        \item level 2
+    \end{enumerate}
+    % Let's counter continue from the previous list value.
+    % starring if want to folow previous formatting
+    \begin{enumerate}[resume*]
+        \item level 2
+        \item level 2
+    \end{enumerate}
+    % Allows customization quickly and easily with option shortlabels
+    \begin{enumerate}[(1)]
+        \item level 2
+        \item level 2
+    \end{enumerate} 
+    % to use basic list in line, add package opt inline
+    % and environment enumerate*, itemize*, description*   
+    \begin{enumerate*}
+        \item level 2
+        \item level 2
+    \end{enumerate*}
+\end{enumerate}
+\begin{enumerate}
+    \item level 1
+    \begin{itemize}
+        \item level 2 
+        \item level 2
+    \end{itemize}
+\end{enumerate}
+\end{document}

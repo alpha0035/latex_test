@@ -1,0 +1,35 @@
+\newcommand{\header}[1]{\textbf{#1}}
+
+\begin{tabbing}
+    Family \= \verb|\textrm{...}| \=\header{Declaration} \= \kill
+    % \kill to hide that line
+    \header{Type}\> \header{Command} \> \header{Declaration} \> \header{Example}\\
+    Family \>\verb|textrm{...}|\>\verb|\rmfamily|\>\rmfamily Example rmfamily \\
+    \>\verb|\textsf{...}|\>\verb|\sffamily|\>\sffamily Example sffamily\\
+    \>\verb|\texttt{...}|\>\verb|\ttfamily|\>\ttfamily Example ttfamily
+\end{tabbing}
+
+% \verb|text| typesets code "as it is", without interpreting commands within
+% \verb cannot be use in args of commands include \section and \footnote
+% verbatim text use verbatim enviroment
+\begin{verbatim}
+    \textrm{\bfseries article}
+    \begin{itemize}
+        \item level 1
+    \end{itemize}
+\end{verbatim}
+
+\begin{tabbing}
+    
+    Nametest \= test text \= level test \= level tested \= tested level\\
+    \> level 1 \> level 2 \> level 3 \> level 4 \\
+    \> level 1 \> level 2 \> level 3 \> level 4 \+\\
+    \> level 1 \> level 2 \> level 3 \- \\%\> level 4 \\
+    \> level 1 \> level 2 \> level 3 \> level 4 \+\+\\
+    \> level 1 \> level 2 \\%\> level 3 \> level 4
+    \< level 1 \> level 2 \> level 3 \> level 4 \\
+    % \+ cause subsequent line to start at the first tab
+    % Use \+\+ to start at the second tab and so on
+    % \- cancel preceding \+
+    % \< at the beginning of line cancel the effect of previous \+ command
+\end{tabbing}

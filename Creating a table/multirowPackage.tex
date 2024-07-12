@@ -1,0 +1,21 @@
+\usepackage{multirow}
+
+\usepackage{array}
+\usepackage{booktabs}
+\setlength{\aboverulesep}{5pt}
+% set all in document, for more see in page 198
+\newcommand{\nm}[1]{\multicolumn{1}{l}{#1}}
+\newcommand{\head}[1]{\em\bfseries #1}
+\begin{document}
+\begin{tabular}{@{}c*2{>{\ttfamily}c}c@{}}
+    \toprule[1.5pt]
+    & \multicolumn{2}{c }{\head{Important level}} & 
+    \multicolumn{1 }{c }{\head{Unescessary level}}\\
+    & \nm{\head{Level 1}} & \nm{\head{Level 2}} & \nm{\head{Level 3}}\\
+    \cmidrule[0.5pt](lr){2-3}\cmidrule[0.5pt](l){4-4}
+    \multirow{3}{*}{\sffamily List} & Alpha & Beta & Gamma\\
+    & One & Two & Three \\
+    & First & Second & Third\\
+    \bottomrule[1.5pt]
+\end{tabular}
+\end{document}

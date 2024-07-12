@@ -1,0 +1,45 @@
+
+\usepackage{paralist} 
+% paralist package provide some new list environments
+\begin{document}
+\begin{enumerate}
+    \item level 1
+    \begin{compactenum}
+        % Compact version of the enumerate environment 
+        % without any vertical space before or after the list or its items
+        \item level 2
+        \item level 2
+    \end{compactenum}
+    \item level 1
+    \begin{asparaenum}
+        % Every list item is formatted 
+        % like a separate common LaTeX paragraph, but numbered
+        \item level 2
+        \item level 2
+    \end{asparaenum}
+    \item level 1
+    \begin{inparaenum}
+        % An enumerated list typeset within a paragraph
+        \item level 2 
+        \item level 2
+    \end{inparaenum}
+    \item level 1
+    \begin{compactitem} 
+        % Compact version of the itemize environment like compactenum
+        \item level 2
+        \item level 2
+    \end{compactitem}
+    \item level 1
+    \begin{asparaitem}
+        % Like asparaenum , but with symbols instead of numbers compactitem
+        \item level 2
+        \item level 2
+    \end{asparaitem}
+    \item level 1
+    \begin{inparaitem}
+        % An itemized list typeset within a paragraph, rarely seen in print
+        \item level 2
+        \item level 2  
+    \end{inparaitem}
+\end{enumerate}
+\end{document}

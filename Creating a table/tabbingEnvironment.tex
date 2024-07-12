@@ -1,0 +1,17 @@
+
+\begin{tabbing}
+    \emph{\bfseries List} \= first level \= : \= second level\\
+    \> level 1 \> : \> level 2\\
+    \> level 1 \> : \> level 2 
+\end{tabbing}
+% \= set a tab stop.
+% \> goes to next tab stop.
+
+% if we use \= later, the next tab stop will be reset
+\begin{tabbing}
+    \emph{\bfseries List} \= first level \= : \= second level \\
+    \> level 1\>:\>level 2\\
+    \emph{\bfseries newList} \= set \=new \=tab \= stop\\
+    \> hi\> : \>nicew\>too  % this will lead to overwrite
+\end{tabbing}
+

@@ -1,0 +1,20 @@
+\usepackage{tabularx}
+% this package will let Latex decide how wide column will be.
+\begin{document}
+\begin{tabularx}{0.6\textwidth}{XcX}
+% one X column will take all available space
+% If we have more X columns, they will share the space equally
+% don't let \multicolumn entries cross any X column
+\hline
+    level 1 & level 2 & level 3\\
+    Alpha&Beta&Gamma\\
+    \hline
+\end{tabularx}\\
+
+\begin{tabular*}{0.6\textwidth}[]{ccc}
+    \hline
+    level 1 & level 2 & level 3\\
+    Alpha &Beta &Gamma\\
+    \hline
+\end{tabular*}
+\end{document}

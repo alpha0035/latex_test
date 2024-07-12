@@ -1,0 +1,18 @@
+
+\usepackage{booktabs}
+% this package provide some type of lines
+\begin{document}
+\begin{tabular}{@{}*3l@{}}
+    \toprule[1.5pt]
+    \multicolumn{2}{c}{\bfseries Important level} & 
+    % \multicolumn{number of columns}{formatting options}{entry text}
+    % use to merge one or more cells
+    \multicolumn{1}{c}{\bfseries Unescessary level}\\
+    \bfseries Level 1 & \bfseries Level 2 & \\
+    \cmidrule(r){1-2}\cmidrule(l){3-3}
+    % use \cmidrule to get a gap between two column
+    Alpha & Beta & Gamma \\
+    One & Two & Three\\
+    \bottomrule[1.5pt]
+\end{tabular}
+\end{document}

@@ -1,0 +1,27 @@
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\setlength{\belowrulesep}{0pt}
+\begin{document}
+\begin{table}
+% table will appear somewhere else other than what their position in source code.
+    \centering
+    \begin{tabular}{@{}*4c}
+        \toprule[1.5pt]
+        & \multicolumn{2}{l}{\bfseries Important Level} &
+        \multicolumn{1}{r}{\bfseries Unescessary Level}\\
+        & \em Level 1 &\em Level 2 & \em Level 3 \\
+        \cmidrule(lr){2-3}\cmidrule(l){4-4}
+        \multirow{3}{*}{\itshape\sffamily Team 1} & Alpha & Beta &Gamma\\
+        & One & Two & Three\\
+        & First & Second & Third\\
+        \cmidrule(lr){2-3}\cmidrule(l){4-4}
+        \multirow{3}{*}{\itshape\sffamily Team 2} & One & Two &Three\\
+        & First& Second & Third\\
+        & Alpha & Beta & Gamma\\
+        \bottomrule[1.5pt]
+    \end{tabular}
+    \caption{List Team Oder}
+    % we can justify caption by "caption" package
+\end{table}
+\end{document}
